@@ -78,6 +78,40 @@ ECMAScript => guideline for all scripting languages
 keywords: let => declare locally scoped variables
 templated string (string template)
 class,constructor, extends, super keywords
+js modules: 
+module formats:
+	a. common js (module.exports/require - default format for Node JS)
+	b. ES6 module format (import/export statements)
+	c. AMD (asynchronous module definition format) 
+	d. UMD (universal module definition format)
+
+module loader: understand the dependencies of one module on other module and resolves those depdencies and load the resolved modules in JS runtime (browser or Node JS)
+a. common js module loader (understands common js format => part of node js runtime)
+b. require js module loader (understands AMD format)
+c. systemjs module loader
+
+issues:
+1. module format
+ES6 module format => common js module format
+ES6 module format => AMD module format
+
+2. code compatibility
+ES6+ code => Vanilla JS Code (<ES6 es2/es3/es5)
+
+JS transpiler s/w s: babel
+	transformation + compiler
+	convert ES6 module to either common js/amd/umd etc.
+
+	feature transformers => 
+		class keyword => constructot function 
+		super keyword => Call(....)
+		extends keyword => 
+		....
+
+	module transformers => 
+
+
+
 
 
 
