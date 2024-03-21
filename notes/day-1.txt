@@ -93,9 +93,9 @@ c. systemjs module loader
 issues:
 1. module format
 ES6 module format => common js module format
-ES6 module format => AMD module format
+ES6 module format => AMD module format ["@babel/plugin-transform-modules-amd" => plugin package]
 
-2. code compatibility
+2. code compatibility: ["@babel/preset-env"=> preset package of babel]
 ES6+ code => Vanilla JS Code (<ES6 es2/es3/es5)
 
 JS transpiler s/w s: babel
@@ -103,12 +103,41 @@ JS transpiler s/w s: babel
 	convert ES6 module to either common js/amd/umd etc.
 
 	feature transformers => 
-		class keyword => constructot function 
+		class keyword => constructor function 
 		super keyword => Call(....)
 		extends keyword => 
 		....
 
 	module transformers => 
+
+
+package manager tools:
+	a. Node Package Manager (NPM) [installed by default when nodejs is installed]
+	b. yarn
+	c. bower etc.
+
+package.json file:
+	>npm init and answer some questions
+	or
+	>npm init --yes
+
+package:
+	a. global installation [path: C:\Users\<usr-name>\AppData\Roaming\npm]
+	>npm install/i <package-name>@<version-no> --location=global
+	b. application specific installation
+
+babel:
+	plugins for every transformer
+	preset => collection of plugins
+	ES6+ => vanilla JS [@babel/preset-env]
+
+**incomplete:
+	a. arrow function
+	b. promise 
+	c. async/await
+
+
+
 
 
 

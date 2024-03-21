@@ -2,6 +2,7 @@
 // class Developer extends Employee {
 
 import { Employee } from "./employee";
+
 export class Developer extends Employee {
     constructor(id, name, basic, da, hra, incentive) {
         super(id, name, basic, da, hra)
@@ -13,5 +14,5 @@ export class Developer extends Employee {
 }
 
 // module.exports = {
-//     Developer
+//     Developer:Developer
 // }
