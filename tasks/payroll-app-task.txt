@@ -1,0 +1,18 @@
+create an application to calculate salary of employees
+
+developer:
+	attributes: name, id, basicpay, dapay, hrapay, incentivepay
+	method: calculateSalary
+				args: NA
+				return: calculated salary
+
+hr:
+	attributes: name, id, basicpay, dapay, hrapay, gratuitypay
+	method: calculateSalary
+				args: NA
+				return: calculated salary
+
+finally,
+	you need to create at least two instances (one of each type) of dev and hr (using hard-coded data)
+	store them in an array
+	iterate through the array and then calculate salary of every employee and print the same

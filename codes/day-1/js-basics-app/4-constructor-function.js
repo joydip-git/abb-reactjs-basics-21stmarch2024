@@ -1,4 +1,5 @@
 /*
+//1. object-literal syntax
 const anilObj = {
     name: 'anil',
     id: 1,
@@ -29,7 +30,7 @@ const sunilObj = {
 // public string Show(){...}
 //}
 
-//constructor function
+//2. constructor function
 function person(personName, personId, personSalary) {
     // var x = 10
     // let y = 20
