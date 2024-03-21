@@ -1,0 +1,86 @@
+S/W s required:
+	Visual Studio Code
+	Node JS	
+
+React JS
+	- SPA (Single Page Application)
+	- just a JS based LIBRARY to create Web application UI, i.e. faster UI development library
+	- client-side UI devleopment library 
+	- Virtual DOM for much faster performance
+	- community support
+
+DI, routing, MV-*, axios or JS api "fetch", redux
+
+React frameworks:
+	Gatsby, Next JS etc.
+
+1. JavaScript
+	a. basics
+	b. advanced
+	c. new features
+
+1.b. TypeScript - new things in TS
+
+2. Node JS
+3. Angular/React/Vue JS
+
+
+Browsers and JS engine:
+chrome: V8 (open-source, C++)
+safari: JS Core
+firefox: Spidermonkey
+edge, opera (chromekit): V8
+
+2009:
+Ryan Dahl
+JS runtime => node js
+angular, react
+
+
+JS:
+diferent types of data in JS?
+a. object
+b. number (fractional and non-fractional)
+c. string (no CHARACTER)
+d. boolean
+e. function
+
+keywords: undefined, NaN, null, Infinity
+
+
+int x = 10;
+//x=12.34;
+x = false
+
+//loosely typed variable (loosely typed language)
+//keyword
+var x = 10
+x = 12.34
+x = false
+
+x = 'joydip'
+
+functions:
+	syntax => 	
+	a. declaration and b. expession
+
+2 step execution process:
+1. preparation stage: all decalartions are taken care of (variable or function)
+2. execution stage
+
+hoisting: registering the local variables and function declarations (NOT expressions) in an object associated with function execution context, is knonw as hoisting
+
+prototype programming
+
+ECMAScript => guideline for all scripting languages
+
+2015: ES6
+keywords: let => declare locally scoped variables
+templated string (string template)
+class,constructor, extends, super keywords
+
+
+
+
+
+
