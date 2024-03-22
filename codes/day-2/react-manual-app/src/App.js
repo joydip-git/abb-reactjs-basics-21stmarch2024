@@ -1,7 +1,7 @@
-import { createElement } from "react";
+import React from "react";
+import './App.css'
 
-//returns DetailedReactHTMLElement object
-function App() {
+const App = () => {
     //data
     const welcomeMessage = 'Welcome to React JS'
     const createdByMessage = 'Created By: Joydip'
@@ -11,18 +11,18 @@ function App() {
         backgroundColor: 'lime'
     }
 
-    //design
-    const welcomeSpanElement = createElement('span', {}, welcomeMessage)
-    const brElement = createElement('br', {})
-    const authorSpanElement = createElement('span', {}, createdByMessage)
-    const headerElement = createElement(
-        'h2',
-        {
-            id: 'headerElement',
-            style: { headerElementStyle }
-        },
-        [welcomeSpanElement, brElement, authorSpanElement]
+    return (
+        <div>
+            <h2 id="headerElement" style={headerElementStyle} className="my-style">
+                <span>{welcomeMessage}</span>
+                <br />
+                <span>{createdByMessage}</span>
+            </h2>
+            <p>
+                This is a paragraph
+            </p>
+        </div>
     )
-
-    return headerElement
 }
+export default App
+

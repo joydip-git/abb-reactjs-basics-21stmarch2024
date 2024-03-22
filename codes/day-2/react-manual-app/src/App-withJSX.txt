@@ -1,0 +1,48 @@
+import React from "react";
+
+//returns React.JSX.Element object
+const App = () => {
+    //data
+    const welcomeMessage = 'Welcome to React JS'
+    const createdByMessage = 'Created By: Joydip'
+
+    //style
+    const headerElementStyle = {
+        backgroundColor: 'lime'
+    }
+
+    //design with JavaScript XML (JSX)
+    //the JSX syntax is converted back to JavaScript (commented below) by @babel/preset-react package plugins
+    const divElement = (
+        <div>
+            <h2 id="headerElement" style={headerElementStyle}>
+                <span>{welcomeMessage}</span>
+                <br />
+                <span>{createdByMessage}</span>
+            </h2>
+            <p>
+                This is a paragraph
+            </p>
+        </div>
+    )
+
+    // design without JSX
+    // const welcomeSpanElement = createElement('span', {}, welcomeMessage)
+    // const brElement = createElement('br', {})
+    // const authorSpanElement = createElement('span', {}, createdByMessage)
+    // const headerElement = createElement(
+    //     'h2',
+    //     {
+    //         id: 'headerElement',
+    //         style: { headerElementStyle }
+    //     },
+    //     [welcomeSpanElement, brElement, authorSpanElement]
+    // )
+    //const paraElement = createElement('p',{})
+    //const divElement = createElement('div',{}, [headerElement, paraElement])
+
+
+    return divElement
+}
+export default App
+
