@@ -1,14 +1,16 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const deps = require('./package.json').dependencies
 
-const webpackConfigObject = {
+module.exports = {
     mode: 'development',
     entry: path.resolve(__dirname, 'src', 'index.js'),
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
+    devtool: 'inline-source-map',
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'public', 'index.html')
@@ -20,33 +22,23 @@ const webpackConfigObject = {
     devServer: {
         port: 9000,
         static: {
-            directory: path.resolve(__dirname, 'public')
-        },
-        compress: true
+            publicPath: path.resolve(__dirname, 'public', 'index.html')
+        }
     },
     resolve: {
-        extensions: ['.html', '.css', '.scss', '.js', '.jsx']
+        extensions: ['.css', '.scss', '.js', '.jsx']
     },
     module: {
         rules: [
-            {
-                test: /\.htm|html$/,
-                use: 'html-loader'
-            },
             {
                 test: /\.js|jsx$/,
                 use: 'babel-loader',
                 exclude: /node_modules/
             },
             {
-                test: /\.css$/,
-                use: ['css-loader', 'style-loader']
-            },
-            {
-                test: /\.scss$/,
-                use: ['sass-loader']
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader']
             }
         ]
     }
 }
-module.exports = webpackConfigObject

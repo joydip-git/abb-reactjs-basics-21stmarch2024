@@ -99,3 +99,12 @@ React:
 		</div>
 	</body>
 		
+
+//const appReactDetailedHTMLElement = App()
+//root.render(appReactDetailedHTMLElement)
+
+//or
+//const appReactJSXElement = <App />
+//root.render(appReactJSXElement)
+
+//or
