@@ -66,7 +66,7 @@ React:
 			i. babel: @babel/core, @babel/cli, @babel/preset-env, @babel/preset-react
 			ii. bundler (Webpack): webpack, webpack-cli
 			iii. app server: webpack-dev-server
-			iv. loaders for webpack: babel-loader, css-loader, style-loader, sass, sass-loader
+			iv. loaders for webpack: html-loader, babel-loader, css-loader, style-loader, sass, sass-loader
 			v. plugins for webpack: html-webpack-plugin, clean-webpack-plugin
 		b. configuration files: package.json, babel.config.json, webpack.config.js
 		c. scripts: build, start

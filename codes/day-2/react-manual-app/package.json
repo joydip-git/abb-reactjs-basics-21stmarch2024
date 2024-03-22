@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "simple react app created without any tool",
   "scripts": {
-    "": ""
+    "build": "webpack",
+    "start": "webpack serve --watch-files ./src"
   },
   "keywords": [],
   "author": "joydip",
