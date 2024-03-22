@@ -1,0 +1,58 @@
+React:
+1. Introduction to React
+2. why it is a client-side UI development?
+	2.i. client-side vs server-side 
+3. why SPA?
+4. why library not framework?
+5. How react app works?
+6. component based architecture
+
+JavaScript:
+1. data types, control flow statements, operators
+	1. i. string, boolean, number, object, function
+	1. ii. keywords: undefined, null, NaN, Infinity etc.
+2. variable declaration (var)
+3. hoisting
+4. execution of JS code: execution context object (properties: variable object, this ...)
+5. function - dclaration and expression
+6. creating objects: 
+	6. i. object literal syntax
+	6. ii. constructor function
+	6. iii. class
+7. new features:
+	a. let and const keywords
+	b. class, constructor, extends and super
+	c. string template
+	d. object de-structuring
+	e. spread operator
+	f. rest operator
+	g. arrow function
+	h. promise
+8. application development:
+	a. packags
+	b. package.json file - what it is and how to create
+	c. package manager tools: nom, bower, yarn
+	d. installing packages:
+		i. globally
+		ii. locally
+9. Node JS 
+10. modules in JS
+		a. module format: es6, common js, amd, umd
+		b. module loader: requirejs, systemjs etc.
+		
+11. transpiler: babel
+12. babel:
+		a. core packages: @babel/core and @babel/cli
+		b. preset packages: @babel/preset-env
+		c. module transformer plugin packages: @babel/plugin-transfromer-amd/commonjs/umd
+
+day-2 topics:
+new features: arrow function and promise
+react:
+	create a react application
+
+multi-threading in JS: Not possible
+because JS is always single-threaded
+is JS execution/runtime environment is multi-threaded or at least uses more than one thread? yes
+JS can take advantage of the runtime/environment and delegate some tasks in their threads
+		
