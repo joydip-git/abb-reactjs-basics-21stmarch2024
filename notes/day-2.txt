@@ -55,4 +55,47 @@ multi-threading in JS: Not possible
 because JS is always single-threaded
 is JS execution/runtime environment is multi-threaded or at least uses more than one thread? yes
 JS can take advantage of the runtime/environment and delegate some tasks in their threads
+
+
+React:
+	1. application development:
+		required assets: 
+		a. packages: 
+			A. complete dependency: react and react-dom 
+			B. dev dependencies: 
+			i. babel: @babel/core, @babel/cli, @babel/preset-env, @babel/preset-react
+			ii. bundler (Webpack): webpack, webpack-cli
+			iii. app server: webpack-dev-server
+			iv. loaders for webpack: babel-loader, css-loader, style-loader, sass, sass-loader
+			v. plugins for webpack: html-webpack-plugin, clean-webpack-plugin
+		b. configuration files: package.json, babel.config.json, webpack.config.js
+		c. scripts: build, start
+		d. template: index.html
+		e. source code: index.js, App.js
+
+		create-react-app tool or manually
+
+	2. component: functional and class component
+	3. React Element and JSX syntax
+
+
+	
+	@angular/core
+	@angular/common
+	@angular/platform-browser-dynamic
+	@angular/platform-browser
+	@angular/router
+	@angular/forms
+	rxjs
+	zone.js
+	tslib.js
+
+
+
+
+	<body>
+		<div id='container'>
+			//react component design should be placed
+		</div>
+	</body>
 		
