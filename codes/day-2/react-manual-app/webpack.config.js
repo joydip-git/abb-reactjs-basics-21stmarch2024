@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 const webpackConfigObject = {
+    mode: 'development',
     entry: path.resolve(__dirname, 'src', 'index.js'),
     output: {
         filename: 'bundle.js',
@@ -29,7 +30,7 @@ const webpackConfigObject = {
     module: {
         rules: [
             {
-                test: /\.html$/,
+                test: /\.htm|html$/,
                 use: 'html-loader'
             },
             {
@@ -43,7 +44,7 @@ const webpackConfigObject = {
             },
             {
                 test: /\.scss$/,
-                use: 'sass-loader'
+                use: ['sass-loader']
             }
         ]
     }
