@@ -1,11 +1,30 @@
 import React, { useState } from 'react'
-import products from '../../data/products'
+import products from '../../../../data/products'
 import './ProductList.css'
 import ProductRow from '../product-row/ProductRow'
+import ProductFilter from '../product-filter/ProductFilter'
 
 const ProductList = () => {
     const [productRecords, setProductRecords] = useState(products)
+    const [filterText, setFilterText] = useState('')
 
+    const filterProductRecordsHandler = (newText) => {
+        const copyRecords = [...productRecords]
+        if (newText !== '') {
+            const filteredRecords = copyRecords.filter(
+                (p) => {
+                    return p.productName.toLocaleLowerCase().includes(newText.toLocaleLowerCase());
+                })
+            setProductRecords(filteredRecords)
+        } else {
+            setProductRecords(products)
+        }
+    }
+
+    const filterTextHandler = (newText) => {
+        setFilterText(newText)
+        filterProductRecordsHandler(newText)
+    }
     const deleteProductHandler = (pid) => {
         const copyRecords = [...productRecords]
         const foundIndex = copyRecords
@@ -28,13 +47,14 @@ const ProductList = () => {
                 }
             )
 
-
-
     return (
         <div>
             <span>
                 List of Products:
             </span>
+            <br />
+            <br />
+            <ProductFilter filterTextValue={filterText} filterTextHandlerFn={filterTextHandler} />
             <br />
             <br />
             <table>

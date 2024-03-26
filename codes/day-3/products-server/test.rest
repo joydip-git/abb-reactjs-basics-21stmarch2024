@@ -1,0 +1,36 @@
+GET http://localhost:4000/products
+
+###
+GET http://localhost:4000/products/3
+
+###
+POST http://localhost:4000/products
+Content-Type: application/json
+
+{
+    "id": "6",
+    "productName": "abcd",
+    "productCode": "TBX-0048",
+    "releaseDate": "May 21, 2016",
+    "description": "Curved claw steel hammer",
+    "price": 8.9,
+    "starRating": 2,
+    "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png" 
+}
+
+###
+PUT http://localhost:4000/products/6
+Content-Type: application/json
+
+{
+    "productName": "xyz",
+    "productCode": "TBX-0048",
+    "releaseDate": "May 21, 2016",
+    "description": "Curved claw steel hammer",
+    "price": 100,
+    "starRating": 2,
+    "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png" 
+}
+
+###
+DELETE  http://localhost:4000/products/6
