@@ -1,48 +1,49 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const deps = require('./package.json').dependencies
+const path = require("path");
 
 module.exports = {
-    mode: 'development',
-    entry: path.resolve(__dirname, 'src', 'index.js'),
+    mode: "development",
+    resolve: {
+        extensions: [".js", ".jsx", ".css", ".scss"],
+    },
+    entry: './src/index.js',
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
-    },
-    devtool: 'inline-source-map',
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, 'public', 'index.html')
-        }),
-        new CleanWebpackPlugin({
-            cleanStaleWebpackAssets: true
-        })
-    ],
-    devServer: {
-        port: 9000,
-        static: {
-            publicPath: path.resolve(__dirname, 'public', 'index.html')
-        }
-    },
-    resolve: {
-        extensions: ['.css', '.scss', '.js', '.jsx']
+        path: path.resolve(__dirname, 'dist'),
     },
     module: {
         rules: [
             {
-                test: /\.(htm|html)$/,
+                test: /\.html$/,
                 use: 'html-loader'
             },
             {
-                test: /\.(js|jsx)$/,
-                use: 'babel-loader',
-                exclude: /node_modules/
+                test: /\.s?css$/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader",
+                ],
             },
             {
-                test: /\.css$/i,
-                use: ['style-loader', 'css-loader']
-            }
-        ]
-    }
-}
+                test: /\.jsx?$/,
+                use: "babel-loader",
+                exclude: /node_modules/,
+            },
+        ],
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "public", "index.html"),
+        }),
+        new CleanWebpackPlugin({ cleanStaleWebpackAssets: true })
+    ],
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'public'),
+        },
+        compress: true,
+        port: 9000,
+    },
+};
