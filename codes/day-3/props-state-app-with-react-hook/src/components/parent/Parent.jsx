@@ -1,50 +1,51 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import Name from '../name/Name'
 import Value from '../value/Value'
+import PersonList from '../person-list/PersonList'
 
-export default class Parent extends Component {
-    // constructor() {
-    //     super()
-    //     this.state = {
+const Parent = () => {
+    console.log('Parent rendered')
+    //const [numState, setNumState] = useState(0)
+    // useState(false)
+    // useState('')
+    // useState({
+    //     nameData: 'anil',
+    //     numData: 0
+    // })
 
-    //     }
-    // }
-    state = {
-        nameData: 'anil',
-        numData: 0
+    const [numData, setNumData] = useState(0)
+    const [nameData, setNameData] = useState('anil')
+    const [peopleList, setPeopleList] = useState(['anil', 'sunil', 'joydip'])
+
+    const peopleListHandler = () => {
+        const copyOfList = [...peopleList]
+        copyOfList.sort(
+            (a, b) => a.localeCompare(b)
+        )
+        setPeopleList(copyOfList)
     }
-    numDataHandler = () => {
-        this.setState(
-            (currentStateCopy) => {
-                return {
-                    numData: currentStateCopy.numData + 1
-                }
-            },
-            () => console.log(this.state)
+    const numDataHandler = () => {
+        setNumData(
+            (currentNum) => {
+                return currentNum + 1
+            }
         )
     }
-    // nameDataHandler = (eventObj) => {
-    //     const newName = eventObj.target.value
-    //     this.setState(
-    //         { nameData: newName },
-    //         () => console.log(this.state)
-    //     )
-    // }
-    nameDataHandler = (newName) => {
-        this.setState(
-            { nameData: newName },
-            () => console.log(this.state)
-        )
+    const nameDataHandler = (newName) => {
+        setNameData(newName)
     }
-    render() {
-        console.log('Parent rendered')
-        return (
-            <div>
-                <Name nameValue={this.state.nameData} nameHandlerFn={this.nameDataHandler} />
-                <br />
-                <br />
-                <Value numValue={this.state.numData} numHandlerFn={this.numDataHandler} />
-            </div>
-        )
-    }
+
+    return (
+        <div>
+            <Name nameValue={nameData} nameHandlerFn={nameDataHandler} />
+            <br />
+            <br />
+            <Value numValue={numData} numHandlerFn={numDataHandler} />
+            <br />
+            <br />
+            <PersonList personRecords={peopleList} personListHandlerFn={peopleListHandler} />
+        </div>
+    )
+
 }
+export default Parent

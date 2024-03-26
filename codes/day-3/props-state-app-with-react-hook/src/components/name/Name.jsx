@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 //props={nameValue:'anil'}
 const Name = (props) => {
-
+    console.log('Name rendered')
     // let design = ''
     // if (props.nameValue) {
     //     design = <span>{props.nameValue}</span>

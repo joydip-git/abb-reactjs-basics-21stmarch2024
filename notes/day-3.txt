@@ -29,5 +29,20 @@ conditional rendering
 React Hooks:
 	 - some APIs provided by React to help you achieve same degree of facilities in functional component as that of the class component, such as, maintaining state, having lifecycle etc.
 
+state hook: useState() API
+function useState(initialState){
+	let state = initialState
+	const update=(newState)=>{
+		state = newState
+	}
+	return [state, update]
+}
+
+ - state need not to be an object always (in class component state property must be assigned to an object always)
+ - you can have as many state as you want (in class component only one state is possible)
+ - new state is NOT merged with old state to produce the updated state, rather the new state simply replaces the old state (when you call setState() method to update state, the old and the new states are merged to produce an updated state)
+
+
+
 
 
