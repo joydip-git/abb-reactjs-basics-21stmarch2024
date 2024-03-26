@@ -1,0 +1,11 @@
+.img-style {
+  margin: 2px;
+  width: 80px;
+}
+.delete-button-style {
+  background-color: blueviolet;
+  border: 1px solid blueviolet;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+}
