@@ -1,0 +1,33 @@
+1. creating react app without any tool
+2. creating react app with create-react-app tool
+3. different types of components:
+	a. functional component
+		- can't have state, used for mainly presentational purpose
+	b. class component
+		- create a class and inherit from base class "Component" from "react" package
+		- can have state, used for maintaining state of data and passing the state data to different nested components for presentation
+4. props
+		- an object with proeperties and associated data, so that data/function can be passed from parent to nested components
+		- property object (props) is immutable
+		- whichever attribute you use with a component becomes a property in property object
+5. state
+		- its a property that is inherited from Component class into your component
+		- to maintain state of data in a component we use state property of class component
+		- the state must be an object always
+		- the data in state is stored using some properties
+		- any property value, if changed, in the state, the component will be re-rendered (new VDOM will be created respective to the component)
+		- state should not be mutated directly, it should mutated immutably
+		- to update any property value in state, use setState() method of base class Component
+		- setState() method asynchronously updated the state, then invokes the render() method of the class component
+
+Configuring props for a component and props validation:
+3rd party package: prop-types 
+
+conditional rendering
+
+
+React Hooks:
+	 - some APIs provided by React to help you achieve same degree of facilities in functional component as that of the class component, such as, maintaining state, having lifecycle etc.
+
+
+
