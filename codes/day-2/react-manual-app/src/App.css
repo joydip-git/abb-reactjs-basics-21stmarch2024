@@ -1,4 +1,7 @@
 .mystyle {
-  width: 400px;
-  height: 300px;
+  height: 100px;
+  font-style: normal;
+  font-family: "Courier New", Courier, monospace;
+  font-size: medium;
+  font-weight: bold;
 }
